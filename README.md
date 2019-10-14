@@ -1,3 +1,3 @@
 
-**Xamarin Forms Component Template**
+**Range slider component for Xamarin Forms**
 __________________________________________________________________________________
