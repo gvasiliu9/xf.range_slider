@@ -1,3 +1,3 @@
 
-**Range slider component for Xamarin Forms**
+**Range slider component for Xamarin Forms, In Progress...**
 __________________________________________________________________________________
