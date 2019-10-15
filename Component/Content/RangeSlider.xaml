@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tt="clr-namespace:TouchTracking.Forms;assembly=TouchTracking.Forms"
+             xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="Utmdev.Xf.RangeSlider.Content.RangeSlider">
+
+    <ContentView.Content>
+
+        <AbsoluteLayout>
+
+            <!--Touch tracking-->
+            <AbsoluteLayout.Effects>
+
+                <tt:TouchEffect Capture="True"
+                                TouchAction="OnTouch" />
+
+            </AbsoluteLayout.Effects>
+
+            <!-- Segments canvas -->
+            <forms:SKCanvasView x:Name="segmentsCanvas"
+                                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                AbsoluteLayout.LayoutFlags="All"
+                                PaintSurface="SegmentsCanvas_OnPaintSurface" />
+
+            <!-- Thumbs canvas -->
+            <forms:SKCanvasView x:Name="thumbsCanvas"
+                                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                AbsoluteLayout.LayoutFlags="All"
+                                PaintSurface="ThumbsCanvas_OnPaintSurface" />
+
+            <!-- Values canvas -->
+            <forms:SKCanvasView x:Name="valuesCanvas"
+                                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                AbsoluteLayout.LayoutFlags="All"
+                                PaintSurface="ValuesCanvas_OnPaintSurface" />
+
+        </AbsoluteLayout>
+
+    </ContentView.Content>
+
+</ContentView>
